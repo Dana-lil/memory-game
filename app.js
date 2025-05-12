@@ -44,16 +44,55 @@ const items =[
     // for the timer we should 
     // create a function that will start the timer
     const timeGenerator = () => {
-        seconeds += 1;
-      if ( seconeds >= 60 ){
-        menutes += 1;
-        seconeds = 0;
+        seconds += 1;
+      if ( seconds >= 60 ){
+        minutes += 1;
+        seconds = 0;
       }
+      // now formt the time before displaying it 
+     let secondsValue =seconds < 10 ? `0${seconds}` : seconds;
+     let minutesValue =minutes < 10 ? `0${minutes}` : minutes;
+        timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
+        
     };
 
 
 
-    // now formt the time before displaying it 
-     let seconedsValue =seconeds < 10 ? `0${seconeds}` : seconeds;
-     let minutesValue =minutes < 10 ? `0${minutes}` : minutes;
-        timeValue.innerHTML = `${minutesValue}:${seconedsValue}`;
+    // for calculating moves
+    const movesCounter = () => {
+        movesCount += 1;
+        moves.innerHTML = `<span>Moves:</span>${movesCount}`;
+    };
+
+
+    //pick random objects from the items Array 
+    const generteRandom = (size =4 ) => {
+        // temprory array 
+        let TempArray = [...items];
+        // intial cardValues Array 
+        let cardValues = [];
+        // size should be double (4*4 matrix)/2 since pair of cards may exist 
+        size = (size * size) / 2;
+        // random object  selection 
+        for (let i = 0; i < size; i++) {
+            // get random index 
+            let randomIndex = Math.floor(Math.random() * TempArray.length);
+            // push the object to the cardValues array 
+            cardValues.push(TempArray[randomIndex]);
+            // remove the object from the temp array 
+            TempArray.splice(randomIndex, 1);
+
+        }
+
+        return cardValues
+    };
+
+    const matrixGenerator = (cardValues, size =4) => {
+        gameContainer.innerHTML = "";
+        cardValues = [...cardValues, ...cardValues];
+        // shuffle the array
+        cardValues.sort(() => Math.random() - 0.5);
+        for ( let i=0; i<size*size; i++){}
+    };
+
+    
