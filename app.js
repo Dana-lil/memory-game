@@ -16,18 +16,18 @@ let secondCard = false;
 
 //  items array 
 const items =[
-    {name:"apple", image:"apple.jpg"},
-    {name:"banana", image:"banana.jpg"},
-    {name:"cherry", image:"cherry.jpg"},
-    {name:"grape", image:"grape.jpg"},
-    {name:"kiwi", image:"kiwi.jpg"},
-    {name:"lemon", image:"lemon.jpg"},
-    {name:"orange", image:"orange.jpg"},
-    {name:"peach", image:"peach.jpg"},
-     {name:"strawberry", image:"strawberry.jpg"},
-      {name:"berry", image:"berry.jpg"},
-       {name:"redberry", image:"redberry.jpg"},
-        {name:"wildberry", image:"wildberry.jpg"},
+    {name:"1", image:"1.png"},
+    {name:"2", image:"2.png"},
+    {name:"3", image:"3.png"},
+    {name:"4", image:"4.png"},
+    {name:"5", image:"5.png"},
+    {name:"6", image:"6.png"},
+    {name:"7", image:"7.png"},
+    {name:"8", image:"8.png"},
+     {name:"9", image:"9.png"},
+      {name:"10", image:"10.png"},
+       {name:"11", image:"11.png"},
+        {name:"12", image:"12.png"},
 ];
 
 
@@ -92,7 +92,19 @@ const items =[
         cardValues = [...cardValues, ...cardValues];
         // shuffle the array
         cardValues.sort(() => Math.random() - 0.5);
-        for ( let i=0; i<size*size; i++){}
+        for ( let i=0; i<size*size; i++){ 
+
+            gameContainer.innerHTML += `
+            <div class="card-container" data-card-value="${cardValues[i].name}">
+                <div class="card-before">?</div>
+                <div class="card-after">
+                <img src="${cardValues[i].image}"
+                class ="image"/></div>
+                </div>
+                    `;
+        }
+
+        // grid 
     };
 
 const initializer = () => {
