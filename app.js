@@ -3,7 +3,7 @@ const timeValue =document.getElementById("time");
 const startButton =document.getElementById("start");
 const stopButton =document.getElementById("stop");
 const resetButton =document.querySelector(".game-container");
-
+const gameContainer =document.querySelector(".game-container");
 const result =document.getElementById("result");
 const controls =document.querySelector(".controls-container");
  
@@ -95,4 +95,12 @@ const items =[
         for ( let i=0; i<size*size; i++){}
     };
 
-    
+const initializer = () => {
+    result.innerHTML = "";
+    winCount =0;
+    let cardValues =generteRandom();
+    console.log(cardValues);
+    matrixGenerator(cardValues);
+};
+
+initializer();
