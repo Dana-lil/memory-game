@@ -105,6 +105,7 @@ const items =[
         }
 
         // grid 
+        gameContainer.style.gridTemplateColumns = `repeat(${size}, auto)`;
     };
 
 const initializer = () => {
