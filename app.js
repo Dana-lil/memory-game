@@ -24,7 +24,7 @@ const items =[
     {name:"6", image:"6.png"},
     {name:"7", image:"7.png"},
     {name:"8", image:"8.png"},
-     {name:"9", image:"9.png"},
+    {name:"9", image:"9.png"},
       {name:"10", image:"10.png"},
        {name:"11", image:"11.png"},
         {name:"12", image:"12.png"},
@@ -56,7 +56,7 @@ const items =[
         
     };
 
-
+ 
 
     // for calculating moves
     const movesCounter = () => {
@@ -76,14 +76,13 @@ const items =[
         // random object  selection 
         for (let i = 0; i < size; i++) {
             // get random index 
-            let randomIndex = Math.floor(Math.random() * TempArray.length);
+           let randomIndex= Math.floor(Math.random() * TempArray.length);
             // push the object to the cardValues array 
             cardValues.push(TempArray[randomIndex]);
             // remove the object from the temp array 
             TempArray.splice(randomIndex, 1);
 
-        }
-
+        } 
         return cardValues
     };
 
@@ -101,7 +100,7 @@ const items =[
                 <img src="${cardValues[i].image}"
                 class ="image"/></div>
                 </div>
-                    `;
+                    `; 
         }
 
         // grid 
@@ -115,5 +114,7 @@ const initializer = () => {
     console.log(cardValues);
     matrixGenerator(cardValues);
 };
+
+
 
 initializer();
