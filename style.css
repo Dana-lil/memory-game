@@ -5,16 +5,16 @@ box-sizing: border-box;
 font-family: "Poppins", sans-serif;
 }
 body {
-background-color: #f4c531;
+background-color: #d6b23d;
 }
 .wrapper{
 box-sizing: border-box;
 width: 26.87em;
 padding: 2.5em 3em;
-background-color: #ffffff;
+background-color: #f1eda7;
 position: absolute;
 transform: translate(-50%, -50%);
-left: 150%;
+left: 50%;
 top:50%;
 border-radius: 0.6em;
 box-shadow: 0 0.9em 2.8em rgba(86,66,0,0.2);
@@ -24,5 +24,18 @@ box-shadow: 0 0.9em 2.8em rgba(86,66,0,0.2);
     position:relative;
     width : 100%;
     display:grid;
+    
+}
+
+img {
+    width : 70px;
+    height : 100px;
+    object-fit: wrapper;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     
 }
