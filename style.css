@@ -8,7 +8,7 @@ body {
 background-color: #d6b23d;
 }
 .wrapper{
-box-sizing: border-box;
+box-sizing: content-box;
 width: 26.87em;
 padding: 2.5em 3em;
 background-color: #f1eda7;
@@ -56,7 +56,8 @@ img {
     align-items:center;
     justify-content:center;
     border:2px solid rgb(219, 183, 62);
-    
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
 }
 
 .card-before{
@@ -68,4 +69,17 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card-after{
+    background-color: #f1eda9;
+    transform: rotateY(180deg);
+}
+
+.card-container.flipped.card-before{
+ transform: rotateY(180deg);
+}
+   
+.card-container.flipped.card-after{
+    transform: rotateY(0deg);
 }
