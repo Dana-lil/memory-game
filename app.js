@@ -83,7 +83,7 @@ const items =[
             TempArray.splice(randomIndex, 1);
 
         } 
-        return cardValues
+        return cardValues;
     };
 
     const matrixGenerator = (cardValues, size =4) => {
@@ -112,13 +112,15 @@ const items =[
 cards= document.querySelectorAll(".card-container");
 cards.forEach((card) =>{
     card.addEventListener("click", () =>{
-        if(!card.classList.contains("matched")){
+
+        if(!card.classList.contains("matched")) {
+            // flip the clicked card
             card.classList.add("flipped");
             if(!firstCard){
                 firstCard=card;
-                firstCardValue=card;
+                firstCardValue=card.getAttribute
              ("data-card-value");
-            }
+            } 
              else{
             movesCounter();
             secondCard =card;
@@ -136,7 +138,8 @@ cards.forEach((card) =>{
                     stopGame();
                     //35 seconeds to finish 
                 }
-            } else {
+            }
+             else {
                 // if the cards do not match then flip the cards back to normal 
                 let [tempFirst , tempSecond] = [firstCard,secondCard]; 
                 firstCard =false;
@@ -168,22 +171,24 @@ startButton.addEventListener("click" , () =>{
     interval = setInterval(timeGenerator , 1000);
 
     // the initial moves 
-    moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
+    moves.innerHTML = `<span>Moves:</span> ${movesCount}
+    `;
     
 initializer();
-    
 
 });
 
  // stop the game 
- stopButton.addEventListener("click" , ( stopGame = () => {
+ stopButton.addEventListener(
+    "click" , ( stopGame = () => {
 
     controls.classList.remove("hide");
     stopButton.classList.add("hide");
     startButton.classList.remove("hide");
     clearInterval(interval);
 
- }));
+ })
+);
 
 const initializer = () => {
     result.innerHTML = "";
