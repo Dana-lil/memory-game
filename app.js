@@ -119,8 +119,7 @@ cards.forEach((card) =>{
                 firstCardValue=card;
              ("data-card-value");
             }
-        }
-        else{
+             else{
             movesCounter();
             secondCard =card;
             let secondCardValue =card.getAttribute("data-card-value");
@@ -137,8 +136,20 @@ cards.forEach((card) =>{
                     stopGame();
                     //35 seconeds to finish 
                 }
+            } else {
+                // if the cards do not match then flip the cards back to normal 
+                let [tempFirst , tempSecond] = [firstCard,secondCard]; 
+                firstCard =false;
+                secondCard = false ;
+                let dalay = setTimeout(() => {
+                    tempFirst.classList.remove("flipped");
+                    tempSecond.classList.remove("flipped");
+
+                },900);
             }
         }
+        }
+       
     })
 })
     };
