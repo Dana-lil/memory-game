@@ -154,6 +154,15 @@ cards.forEach((card) =>{
 })
     };
 
+//start game 
+startButton.addEventListener("click" , () =>{
+    movesCount = 0;
+    time =0;
+
+    // working in controls and 
+})
+
+
 const initializer = () => {
     result.innerHTML = "";
     winCount =0;
