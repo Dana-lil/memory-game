@@ -24,7 +24,18 @@ box-shadow: 0 0.9em 2.8em rgba(86,66,0,0.2);
     position:relative;
     width : 100%;
     display:grid;
+    gap: 0.6em;
     
+}
+
+.stats-container {
+text-align: right;
+margin-bottom: 1.2em;
+}
+
+
+.stats.container span {
+    font-weight:  600;
 }
 
 img {
@@ -104,7 +115,7 @@ button {
 #stop {
     font-size: 1.1em;
     display:block;
-    margin: 1.1em auto 0 aut;
+    margin: 1.1em auto 0 auto;
     background-color: black;
     color: aliceblue;
 
@@ -121,13 +132,13 @@ button {
  button { 
     border: none; 
     border-radius :0.3em; 
-    padding: 11em 1.5em;
+    padding: 1em 1.5em;
      cursor: pointer; 
     } 
     
     #stop {
          font-size: 1.1em;
-          display:block;
+          display:block ;
            margin: 1.1em auto 0 auti;
             background-color: black;
              color: aliceblue; 
@@ -139,3 +150,20 @@ button {
                   .hide {
                      display:none;
                      }
+
+
+
+
+     #result {
+        text-align: center;
+     }
+
+      #result h2 {
+        font-size: 2.5em;
+
+      }               
+
+      #result h4 {
+        font-size: 1.8em;
+       margin: 0.6em 0.1em 0;
+      }               
