@@ -164,9 +164,16 @@ startButton.addEventListener("click" , () =>{
     stopButton.classList.remove("hide");
     startButton.classList.add("hide");
 
+    // start the timer whe the game begins 
+    interval = setInterval(timeGenerator , 1000);
+
+    // the initial moves 
+    moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
+    
+initializer();
     
 
-})
+});
 
 
 const initializer = () => {
