@@ -159,7 +159,13 @@ startButton.addEventListener("click" , () =>{
     movesCount = 0;
     time =0;
 
-    // working in controls and 
+    // working in controls and buttons visibality 
+     controls.classList.add("hide");
+    stopButton.classList.remove("hide");
+    startButton.classList.add("hide");
+
+    
+
 })
 
 
