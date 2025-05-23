@@ -71,4 +71,4 @@ const controls =document.querySelector(".controls-container");
  > ### 🎮 now if you want to try the best game ever , click the link below ! :)
 
 
- * ### [The memory game](http://127.0.0.1:5501/)
+ * ### [The Memory Game](https://dana-lil.github.io/memory-game/)
