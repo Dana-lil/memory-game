@@ -30,17 +30,25 @@ const controls =document.querySelector(".controls-container");
 ## why used them?
 
  * **Moves-Count** : for displaying the moves and how many moves have the player moved.
+
 ![alt text](image-2.png)
 
 * **Time** : of course for displaying the time that the player spend at each game .
+
 ![alt text](image-3.png)
+
 * **Start** : start button to start the Game at the ery begining 
+
 ![alt text](image-4.png)
+
 * **Stop** : stop button for stoping the game anyTime the player desire .
+
 ![alt text](image-5.png)
+
 * **Game-Container** : this is the container or the wrapper that contains the reset button and all the cards and functionality , including the stop button .
 
 * **Result** : will display the result after and while the game is in procces 
+
 ![alt text](image-6.png)
 
 
