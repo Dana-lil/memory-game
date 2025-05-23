@@ -137,7 +137,7 @@ cards.forEach((card) =>{
                     result.innerHTML = `<h2> You won </h2>
                     <h4> Moves: ${movesCount} </h4>`;
                     stopGame();
-                    //35 seconeds to finish 
+                    
                 }
             }
              else {
