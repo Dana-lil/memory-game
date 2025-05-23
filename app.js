@@ -14,7 +14,7 @@ let firstCard = false;
 let secondCard = false;
 
 
-//  items array 
+//  items (images of cards) array 
 const items =[
     {name:"1", image:"1.png"},
     {name:"2", image:"2.png"},
@@ -66,7 +66,7 @@ const items =[
     };
 
 
-    //pick random objects from the items Array 
+    //picking random objects from the items Array 
     const generteRandom = (size =4 ) => {
         // temprory array 
         let TempArray = [...items];
@@ -198,6 +198,7 @@ const initializer = () => {
     console.log(cardValues);
     matrixGenerator(cardValues);
 };
+
 
 
 

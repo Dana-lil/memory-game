@@ -53,7 +53,10 @@ const controls =document.querySelector(".controls-container");
 
 
 
+#### i used some kind of ***assists*** from youtube and websites that i  can learn how to grid my matrix and make some gaps between them and so on 
+* [grid assist](https://youtube.com/shorts/m0HjrGSLuy4?si=ZkV293anYCBtmpt2)
 
+* [a video that gave me an idea of the structure of the game ](https://youtu.be/xWdkt6KSirw?si=VQfoQtsC1qNWHghd)
 
 
 
@@ -65,4 +68,4 @@ const controls =document.querySelector(".controls-container");
 ### now if you want to try the best game ever , click the link below ! :)
 
 
- ### [The memory game](http://127.0.0.1:5501/)
+ * ### [The memory game](http://127.0.0.1:5501/)
