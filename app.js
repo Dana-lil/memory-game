@@ -32,11 +32,12 @@ const items =[
 
 
 // initial time
-
+// the seconds and minutes should be starting from zero
  let seconds =0;
     let minutes =0;
-    // initial moves and win count 
 
+    // initial moves and win count 
+    // that means at first the moves and the win shoulde be 0 
     let movesCount = 0;
     let winCount = 0;
 
@@ -49,27 +50,28 @@ const items =[
         minutes += 1;
         seconds = 0;
       }
-      // now formt the time before displaying it 
+      // now formting the time before displaying it 
      let secondsValue =seconds < 10 ? `0${seconds}` : seconds;
      let minutesValue =minutes < 10 ? `0${minutes}` : minutes;
-        timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}
-        `;
+     //this will display the time in sec and min in the screen 
+      timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}  `;
         
     };
 
  
 
-    // for calculating moves
+    // a function for calculating moves
     const movesCounter = () => {
         movesCount += 1;
+        // this will diplay moves on screen
         moves.innerHTML = `<span>Moves:</span>${movesCount}`;
     };
 
-
+    //function generateRandom
     //picking random objects from the items Array 
     const generteRandom = (size =4 ) => {
         // temprory array 
-        let TempArray = [...items];
+        let TempsArray = [...items];
         // intial cardValues Array 
         let cardValues = [];
         // size should be double (4*4 matrix)/2 since pair of cards may exist 
@@ -77,11 +79,11 @@ const items =[
         // random object  selection 
         for (let i = 0; i < size; i++) {
             // get random index 
-           let randomIndex= Math.floor(Math.random() * TempArray.length);
+           let randomIndex= Math.floor(Math.random() * TempsArray.length);
             // push the object to the cardValues array 
-            cardValues.push(TempArray[randomIndex]);
+            cardValues.push(TempsArray[randomIndex]);
             // remove the object from the temp array 
-            TempArray.splice(randomIndex, 1);
+            TempsArray.splice(randomIndex, 1);
 
         } 
         return cardValues;
