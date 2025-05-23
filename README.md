@@ -1,7 +1,7 @@
 
 
 
-#   Cat Memory card game ! 
+#  🎮 Cat Memory card game ! 
 
 
 ![alt text](image-1-1.png)  
@@ -13,6 +13,7 @@
 
 The game starts with all the cards face down and players take turns to turn over **two cards**. If the two cards have the same picture, then they keep the cards, otherwise they turn the cards face down again. The winner is the person with the most cards when all the cards have been taken
 
+## winning conditions ! 
 
 ## structure of the game 
 
@@ -53,7 +54,7 @@ const controls =document.querySelector(".controls-container");
 
 
 
-#### i used some kind of ***assists*** from youtube and websites that i  can learn how to grid my matrix and make some gaps between them and so on 
+> #### i used some kind of ***assists*** from youtube and websites that i  can learn how to grid my matrix and make some gaps between them and so on 
 * [grid assist](https://youtube.com/shorts/m0HjrGSLuy4?si=ZkV293anYCBtmpt2)
 
 * [a video that gave me an idea of the structure of the game ](https://youtu.be/xWdkt6KSirw?si=VQfoQtsC1qNWHghd)
@@ -65,7 +66,9 @@ const controls =document.querySelector(".controls-container");
 
 
 
-### now if you want to try the best game ever , click the link below ! :)
+
+
+ > ### 🎮 now if you want to try the best game ever , click the link below ! :)
 
 
  * ### [The memory game](http://127.0.0.1:5501/)
