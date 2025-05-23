@@ -11,9 +11,15 @@
 
 ## How to play the game?
 
-The game starts with all the cards face down and players take turns to turn over **two cards**. If the two cards have the same picture, then they keep the cards, otherwise they turn the cards face down again. The winner is the person with the most cards when all the cards have been taken
+The game starts with all the cards face down and players take turns to turn over **two cards**. If the two cards have the same picture, then they keep the cards, otherwise they turn the cards face down again. The winner is the person with the most cards when all the cards have been taken.
+
+## about the game :
+The Memory Card Game, also known as "Concentration," is a popular game played with many cards where players try to remember the location of matching pairs. The goal is to collect the most pairs of matching cards.
+
 
 ## winning conditions ! 
+ * you should flip cards and match them correctley !
+* you should match all the cards , and maybe try to hurry up because the more you finish early the more you win ! 
 
 ## structure of the game 
 
