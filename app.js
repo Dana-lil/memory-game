@@ -12,7 +12,7 @@ let cards ;
 let interval;
 let firstCard = false;
 let secondCard = false;
-
+let lossTimeOut ;
 
 //  items (images of cards) array 
 const items =[
@@ -96,6 +96,8 @@ const items =[
         cardValues.sort(() => Math.random() - 0.5);
         for ( let i=0; i<size*size; i++){ 
 
+
+        // this code is generating cards for a memory game. and adding the cards to the game container 
             gameContainer.innerHTML += `
             <div class="card-container" data-card-value="${cardValues[i].name}">
                 <div class="card-before">?</div>
@@ -105,6 +107,8 @@ const items =[
                 </div>
                     `; 
         }
+
+
 
         // grid 
         gameContainer.style.gridTemplateColumns = `repeat(${size}, auto)`;
@@ -116,6 +120,8 @@ cards= document.querySelectorAll(".card-container");
 cards.forEach((card) =>{
     card.addEventListener("click", () =>{
 
+//This checks if the clicked card has not already been matched.
+//If it's already matched, we ignore it (because we don’t want to flip matched cards again).
         if(!card.classList.contains("matched")) {
             // flip the clicked card
             card.classList.add("flipped");
@@ -150,8 +156,7 @@ cards.forEach((card) =>{
                 let dalay = setTimeout(() => {
                     tempFirst.classList.remove("flipped");
                     tempSecond.classList.remove("flipped");
-
-                },900);
+                 },900);
             }
         }
         }
@@ -163,6 +168,7 @@ cards.forEach((card) =>{
 //start game 
 startButton.addEventListener("click" , () =>{
     movesCount = 0;
+    seconds =0;
     time =0;
 
     // working in controls and buttons visibality 
@@ -172,6 +178,15 @@ startButton.addEventListener("click" , () =>{
 
     // start the timer when the game begins 
     interval = setInterval(timeGenerator , 1000);
+    
+    // adding the you lose 
+    lossTimeOut =setTimeout(() =>{
+        if (winCount < Math.floor(items.length /2)){
+            result.innerHTML =`<h2> You lost </h2>
+            <h4> Time is Up! Moves: ${movesCount} </h4>`;
+            stopGame();
+        }
+    }, 60000);
 
     // the initial moves 
     moves.innerHTML = `<span>Moves:</span> ${movesCount}
@@ -184,7 +199,8 @@ initializer();
  // stop the game 
  stopButton.addEventListener(
     "click" , ( stopGame = () => {
-
+       //In JavaScript, the .classList property is used to work with the 
+       // list of classes assigned to an HTML element.
     controls.classList.remove("hide");
     stopButton.classList.add("hide");
     startButton.classList.remove("hide");
